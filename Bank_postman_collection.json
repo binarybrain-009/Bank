@@ -1,0 +1,346 @@
+{
+	"info": {
+		"_postman_id": "1dd213a0-225d-4347-86bc-0e766235c78b",
+		"name": "Bank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add role",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"role\": \"Admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employee/addRole",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"addRole"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"anne\",\r\n    \"contactNumber\": \"0765533213\",\r\n    \"birthday\":\"1995/12/2\",\r\n    \"email\":\"anne@gmail.com\",\r\n    \"password\":\"1234\",\r\n    \"role\":\"Admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employee/createEmployee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"createEmployee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"anne@gmail.com\",\r\n    \"password\":\"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employee/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createAccount",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJTcHJpbmctU2VjdXJpdHktQXBwIiwic3ViIjoiYW5uZUBnbWFpbC5jb20iLCJpYXQiOjE2MzgyNDMzNDYsImV4cCI6MTYzODI3OTM0Nn0.FlrctkPPnY3zuW6a1Ef6xKCRi0eti9Joew2Yb1XkeL8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountName\":\"18+\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employee/createAccount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"createAccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createCustomer",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJTcHJpbmctU2VjdXJpdHktQXBwIiwic3ViIjoiYW5uZUBnbWFpbC5jb20iLCJpYXQiOjE2MzgxMDMyNzUsImV4cCI6MTYzODEzOTI3NX0.WOSPNQOR4BYvguFNO0cNd8Jy8TkuNh1TM4bZN8quzkc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountNumber\": 1,\r\n    \"name\": \"\",\r\n    \"contactNumber\": \"\",\r\n    \"email\":\"\",\r\n    \"password\":\"\",\r\n    \"role\": \"Customer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employee/createCustomer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"createCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCustomer",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJTcHJpbmctU2VjdXJpdHktQXBwIiwic3ViIjoiYW5uZUBnbWFpbC5jb20iLCJpYXQiOjE2MzgyNDkyODksImV4cCI6MTYzODI4NTI4OX0.gZSZXcY4dEo_pVd6lK9TYuMy-tZPB-wGhru7BxLwYvI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/employee/deleteCustomer/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"deleteCustomer",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "link account",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJTcHJpbmctU2VjdXJpdHktQXBwIiwic3ViIjoiYW5uZUBnbWFpbC5jb20iLCJpYXQiOjE2MzgyNDkyODksImV4cCI6MTYzODI4NTI4OX0.gZSZXcY4dEo_pVd6lK9TYuMy-tZPB-wGhru7BxLwYvI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerID\":\"\",\r\n    \"accountID\":\"\",\r\n    \"deposite\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employee/linkAccountToCustomer/4/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"linkAccountToCustomer",
+						"4",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "depositeMoney",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerID\": 4,\r\n    \"transferAmount\": 10000,\r\n    \"accountTypeID\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employee/depositeMoney",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"depositeMoney"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transferMoney",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"senderID\":,\r\n    \"senderAccountNumber\":,\r\n    \"receiverID\":,\r\n    \"receiverAccountNumber\":,\r\n    \"transferAmount\":\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employee/transferMoney",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"transferMoney"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generate report",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJTcHJpbmctU2VjdXJpdHktQXBwIiwic3ViIjoiYW5uZUBnbWFpbC5jb20iLCJpYXQiOjE2Mzg1NDk2OTIsImV4cCI6MTYzODU4NTY5Mn0.VjmsXxgtXTt1GBZbDjyxMZp_SZG8Q6wNZLk2dq7hptA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/employee/generateReport/1/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employee",
+						"generateReport",
+						"1",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
